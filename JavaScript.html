@@ -49,6 +49,44 @@
 
 			//DOM리스너를 추가하여 페이지가 로드될 때 initialize()함수가 실행되게 함.
 			google.maps.event.addDomListener(window,'load',initialize);
+/*
+			$(document).ready(function(){
+				//AJAX in the data file
+				$.ajax({
+					type:"GET",
+					url:"test.csv",
+					dataType:"text",
+					success:function(data){processData(data);}
+
+				});
+
+				function processData(data){
+					var lines=data.split(/\r\n|\n/);
+
+					var time=[];
+					var data1=[];
+					var data2=[];
+					var data3=[];
+					
+					var headings = lines[0].split(',');
+
+					for(var j =1; j<lines.length; j++)
+					{
+						var values = lines[j].split(',');
+						time.push(values[0]);
+						data1.push(parseFloat(values[1]));
+						data2.push(parseFloat(values[2]));
+						data3.push(parseFloat(values[3]));
+					}
+
+					var x =0;
+					console.log(headings[0]+" : "+time[x]+headings[1]+" : "+data1[x]+headings[2]+" : "+);
+
+				}
+
+
+			})
+*/
 
 		</script>
 	</head>
